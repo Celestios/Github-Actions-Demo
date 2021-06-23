@@ -2,6 +2,8 @@
 
 repo_token=$1
 
+echo "token: $repo_token"
+
 milestone="milestone1"
 
 IFS='/' read owner repository <<< "$GITHUB_REPOSITORY"
