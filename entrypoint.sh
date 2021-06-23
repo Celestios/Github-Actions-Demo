@@ -13,6 +13,11 @@ release_url=$(dotnet gitreleasemanager create \
 --owner $owner \
 --repository $repository)
 
+if [ $? -ne 0]; then
+  echo "::error::Failure"
+  exit 1
+fi
+
 echo "::debug::The release url: $release_url"
 
 echo "::set-output name=test-var::$release_url"
