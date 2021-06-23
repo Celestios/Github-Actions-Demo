@@ -6,11 +6,13 @@ echo "token: $repo_token"
 
 IFS='/' read owner repository <<< "$GITHUB_REPOSITORY"
 
-release_url=$(dotnet gitreleasemanager create \
---targetcommitish $GITHUB_SHA \
---token $repo_token \
---owner $owner \
---repository $repository)
+#release_url=$(dotnet gitreleasemanager create \
+#--targetcommitish $GITHUB_SHA \
+#--token $repo_token \
+#--owner $owner \
+#--repository $repository)
+
+release_url="$repository/$owner@$GITHUB_SHA"
 
 if [ $? -ne 0 ]; then
   echo "::error::Failure"
