@@ -1,0 +1,8 @@
+name: 'Test Action'
+description: 'Example of a private action'
+author: 'Darren Kuefner'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile' -- could use a registry location instead to point externally
+  
