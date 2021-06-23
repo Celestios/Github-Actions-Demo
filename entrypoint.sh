@@ -2,7 +2,7 @@
 
 repo_token=$1
 
-milestone="milestone"
+milestone="milestone1"
 
 IFS='/' read owner repository <<< "$GITHUB_REPOSITORY"
 
