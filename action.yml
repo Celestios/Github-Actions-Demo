@@ -1,6 +1,10 @@
 name: 'private action'
 description: 'test action'
 author: 'Darren Kuefner'
+inputs:
+  repo-token:
+    description: 'Github token for authentication'
+    required: true
 outputs:
   test-var:
     description: 'the test var'
