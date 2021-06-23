@@ -20,8 +20,6 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "::debug::The release url: $release_url"
-
 echo "::set-output name=test-var::$release_url"
 
 exit 0
