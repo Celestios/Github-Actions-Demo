@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -name: Set the test var
-        id: private-action
+        id: Github-Actions-Demo
         uses: ./
         with:
            repo-token: ${{ secrets.GITHUB_TOKEN }}
