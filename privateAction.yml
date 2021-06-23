@@ -1,0 +1,9 @@
+name: 'private action'
+description: 'test action'
+author: 'Darren Kuefner'
+outputs:
+  test-var:
+    description: 'the test var'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
