@@ -13,7 +13,7 @@ release_url=$(dotnet gitreleasemanager create \
 --owner $owner \
 --repository $repository)
 
-if [ $? -ne 0]; then
+if [ $? -ne 0 ]; then
   echo "::error::Failure"
   exit 1
 fi
