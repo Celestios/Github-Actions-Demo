@@ -1,4 +1,4 @@
-name: Test Action
+name: Test Actions
 on:
   push:
 
@@ -7,10 +7,9 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      -name: Set the test var
-        id: Github-Actions-Demo
+      - name: Get Source
+        uses: actions/checkout@v1
+      - name: Set the test var
         uses: ./
-        with:
-           repo-token: ${{ secrets.GITHUB_TOKEN }}
-      -name: Print the test var
+      - name: Print the test var
         run: echo ${{ steps.private-action.outputs.test-var }}
