@@ -7,6 +7,6 @@ RUN dotnet tool install -g GitReleaseManager.Tool
 
 ENV PATH /root/.dotnet/tools:$PATH
 
-RUN ["chmod", "+x", "entrypoint.sh"]
+RUN ["chmod", "+x", "./entrypoint.sh"]
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
