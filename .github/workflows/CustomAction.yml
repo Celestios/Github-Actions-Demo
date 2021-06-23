@@ -1,0 +1,16 @@
+name: Test Action
+on:
+  push:
+
+jobs: 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      -name: Set the test var
+        id: private-action
+        uses: ./
+        with:
+           repo-token: ${{ secrets.GITHUB_TOKEN }}
+      -name: Print the test var
+        run: echo ${{ steps.private-action.outputs.test-var }}
