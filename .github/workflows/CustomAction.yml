@@ -11,7 +11,5 @@ jobs:
         uses: actions/checkout@v1
       - name: Set the test var
         uses: ./
-        with:
-           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Print the test var
         run: echo ${{ steps.private-action.outputs.test-var }}
