@@ -7,6 +7,7 @@ echo "token: $repo_token"
 IFS='/' read owner repository <<< "$GITHUB_REPOSITORY"
 
 #release_url=$(dotnet gitreleasemanager create \
+#--milestone $milestone \
 #--targetcommitish $GITHUB_SHA \
 #--token $repo_token \
 #--owner $owner \
