@@ -11,5 +11,5 @@ jobs:
         uses: ./
         with:
            repo-token: ${{ secrets.GITHUB_TOKEN }}
-      -name: Print the test var
+      - name: Print the test var
         run: echo ${{ steps.private-action.outputs.test-var }}
