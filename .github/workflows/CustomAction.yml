@@ -10,6 +10,7 @@ jobs:
       - name: Get Source
         uses: actions/checkout@v1
       - name: Set the test var
+        id: private-action
         uses: ./
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
